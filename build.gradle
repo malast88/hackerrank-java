@@ -1,0 +1,25 @@
+subprojects {
+
+    repositories {
+        mavenCentral()
+    }
+
+    apply plugin: "java"
+
+    dependencies{
+        testImplementation(
+                "org.junit.jupiter:junit-jupiter-api:5.1.0"
+        )
+        testRuntimeOnly(
+                "org.junit.jupiter:junit-jupiter-engine:5.1.0"
+        )
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.6'
+}
