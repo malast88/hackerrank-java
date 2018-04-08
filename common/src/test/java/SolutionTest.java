@@ -30,8 +30,7 @@ class SolutionTest {
     }
 
     @Test
-    public void ResourcesTest() throws IOException
-    {
+    public void ResourcesTest() throws IOException {
         TestResourceContext context = new TestResourceContext("input01.txt", "output01.txt");
         try {
 
@@ -43,8 +42,7 @@ class SolutionTest {
 
             // Assert
             context.assertExpectedOutputFileEqualsToOut();
-        }
-        finally {
+        } finally {
             context.teardown();
         }
     }
