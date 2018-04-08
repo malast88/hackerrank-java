@@ -5,8 +5,9 @@ subprojects {
     }
 
     apply plugin: "java"
+    apply plugin: "jacoco"
 
-    dependencies{
+    dependencies {
         testImplementation(
                 "org.junit.jupiter:junit-jupiter-api:5.1.0"
         )
@@ -19,6 +20,28 @@ subprojects {
         useJUnitPlatform()
     }
 }
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: "jacoco"
+
+task jacocoMerge(type: JacocoMerge){
+    executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
+}
+
+task jacocoReport(type: JacocoReport) {
+    dependsOn jacocoMerge
+    executionData jacocoMerge.destinationFile
+    sourceDirectories = files(subprojects.sourceSets.main.allSource.srcDirs)
+    classDirectories = files(subprojects.sourceSets.main.output)
+    reports {
+        xml.enabled = true
+    }
+    onlyIf = {
+        true
+    }}
 
 task wrapper(type: Wrapper) {
     gradleVersion = '4.6'
