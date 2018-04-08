@@ -1,10 +1,8 @@
+import common.TestResourceContext;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.io.PrintStream;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 
 class SolutionTest {
@@ -17,7 +15,7 @@ class SolutionTest {
                 + "abc" + System.lineSeparator();
         String expectedOutputStr = "a" + System.lineSeparator()
                 + "ba" + System.lineSeparator()
-                + "cba" + System.lineSeparator();
+                + "cba";
         InputStream inputStream = new ByteArrayInputStream(inputStr.getBytes(StandardCharsets.UTF_8));
         ByteArrayOutputStream outputByteStream = new ByteArrayOutputStream();
         PrintStream outputStream = new PrintStream(outputByteStream);
@@ -27,7 +25,27 @@ class SolutionTest {
         Solution.main(null);
 
         // Assert
-        String outputStr = new String(outputByteStream.toByteArray());
+        String outputStr = outputByteStream.toString();
         Assertions.assertEquals(expectedOutputStr, outputStr);
+    }
+
+    @Test
+    public void ResourcesTest() throws IOException
+    {
+        TestResourceContext context = new TestResourceContext("input01.txt", "output01.txt");
+        try {
+
+            // Arrange
+            Solution.setInOut(context.getIn(), context.getOut());
+
+            // Act
+            Solution.main(null);
+
+            // Assert
+            context.assertExpectedOutputFileEqualsToOut();
+        }
+        finally {
+            context.teardown();
+        }
     }
 }

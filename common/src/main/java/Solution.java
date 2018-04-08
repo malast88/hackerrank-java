@@ -30,8 +30,13 @@ class Solution {
 
     public static void main(String[] args) {
         setupIo();
+        boolean isFirstLine = true;
         while (scanner.hasNextLine()) {
-            out.println(reverseString(scanner.nextLine()));
+            if (!isFirstLine){
+                out.println();
+            }
+            isFirstLine = false;
+            out.print(reverseString(scanner.nextLine()));
         }
     }
 
