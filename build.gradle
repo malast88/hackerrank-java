@@ -1,11 +1,15 @@
-subprojects {
+allprojects {
 
     repositories {
         mavenCentral()
     }
+    apply plugin: "jacoco"
+
+}
+
+subprojects {
 
     apply plugin: "java"
-    apply plugin: "jacoco"
 
     dependencies {
         testImplementation(
@@ -21,12 +25,6 @@ subprojects {
     }
 }
 
-repositories {
-    mavenCentral()
-}
-
-apply plugin: "jacoco"
-
 task jacocoMerge(type: JacocoMerge){
     executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
 }
@@ -38,6 +36,7 @@ task jacocoReport(type: JacocoReport) {
     classDirectories = files(subprojects.sourceSets.main.output)
     reports {
         xml.enabled = true
+        html.enabled = true
     }
     onlyIf = {
         true
