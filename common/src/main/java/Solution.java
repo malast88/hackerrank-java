@@ -35,7 +35,7 @@ class Solution {
             if (!isFirstLine){
                 out.println();
             }
-            //isFirstLine = false;
+            isFirstLine = false;
             out.print(reverseString(scanner.nextLine()));
         }
     }
