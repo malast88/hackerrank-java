@@ -15,4 +15,5 @@ Tracks:
 # Algorithms
 ## Implementation
 |Problem|Complexity|Solution|
+|---|---|---|
 |[Climbing the Leaderboard](https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem)|Medium|[ClimbingTheLeaderboard.java](https://github.com/malast88/hackerrank-java/blob/master/algo/impl/climbing-the-leaderboard/src/main/java/ClimbingTheLeaderboard.java)|
