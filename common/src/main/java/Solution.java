@@ -39,6 +39,8 @@ final class Solution {
             isFirstLine = false;
             out.print(reverseString(scanner.nextLine()));
         }
+        scanner.close();
+        out.close();
     }
 
     private static String reverseString(String str) {

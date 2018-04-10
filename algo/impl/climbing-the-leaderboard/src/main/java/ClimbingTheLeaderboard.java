@@ -38,6 +38,8 @@ final class ClimbingTheLeaderboard {
             roundScores[i] = scanner.nextInt();
         }
         ClimbTheLeaderboard(leaderboard, roundScores);
+        scanner.close();
+        out.close();
     }
 
     private static void ClimbTheLeaderboard(int[] leaderboard, int[] roundScores) {
