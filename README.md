@@ -10,8 +10,14 @@ Involved frameworks and services:
 * Codecov
 
 Tracks:
+* [Java](#Java)
 * [Algorithms](#Algorithms)
 
+# Java
+## Strings
+|Problem|Complexity|Solution|
+|---|---|---|
+|[Java String Tokens](https://www.hackerrank.com/challenges/java-string-tokens/problem)|Easy|[JavaStringTokens.java](https://github.com/malast88/hackerrank-java/blob/master/java/strings/java-string-tokens/src/main/java/JavaStringTokens.java)|
 # Algorithms
 ## Implementation
 |Problem|Complexity|Solution|
