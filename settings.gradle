@@ -1,3 +1,4 @@
 include("common",
-"algo:impl:climbing-the-leaderboard")
+"algo:impl:climbing-the-leaderboard",
+"java:strings:java-string-tokens")
 

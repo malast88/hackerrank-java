@@ -31,7 +31,7 @@ class SolutionTest {
 
     @Test
     public void ResourcesTest() throws IOException {
-        TestResourceContext context = new TestResourceContext("input01.txt", "output01.txt");
+        TestResourceContext context = new TestResourceContext("01_input.txt", "02_output.txt");
         try {
 
             // Arrange
