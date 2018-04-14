@@ -18,6 +18,10 @@ Tracks:
 |Problem|Complexity|Solution|
 |---|---|---|
 |[Java String Tokens](https://www.hackerrank.com/challenges/java-string-tokens/problem)|Easy|[JavaStringTokens.java](https://github.com/malast88/hackerrank-java/blob/master/java/strings/java-string-tokens/src/main/java/JavaStringTokens.java)|
+## Data structures
+|Problem|Complexity|Solution|
+|---|---|---|
+|[Java 1D Array (Part 2)](https://www.hackerrank.com/challenges/java-1d-array/problem)|Medium|[Java1DArray.java](https://github.com/malast88/hackerrank-java/blob/master/java/data-structures/java-1d-array/src/main/java/Java1DArray.java)|
 # Algorithms
 ## Implementation
 |Problem|Complexity|Solution|

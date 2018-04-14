@@ -1,4 +1,5 @@
 include("common",
 "algo:impl:climbing-the-leaderboard",
+"java:data-structures:java-1d-array",
 "java:strings:java-string-tokens")
 
