@@ -22,6 +22,10 @@ Tracks:
 |Problem|Complexity|Solution|
 |---|---|---|
 |[Java 1D Array (Part 2)](https://www.hackerrank.com/challenges/java-1d-array/problem)|Medium|[Java1DArray.java](https://github.com/malast88/hackerrank-java/blob/master/java/data-structures/java-1d-array/src/main/java/Java1DArray.java)|
+## Advanced
+|Problem|Complexity|Solution|Comment|
+|---|---|---|---|
+|[Can You Access?](https://www.hackerrank.com/challenges/can-you-access/problem)|Medium|[CanYouAccess.java](https://github.com/malast88/hackerrank-java/blob/master/java/advanced/can-you-access/src/main/java/CanYouAccess.java)|This challenge consists of writing a part of custom code, so custom code is not really copy-paste ready: need change out to System.out|
 # Algorithms
 ## Implementation
 |Problem|Complexity|Solution|

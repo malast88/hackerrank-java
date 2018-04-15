@@ -1,5 +1,6 @@
 include("common",
 "algo:impl:climbing-the-leaderboard",
+"java:advanced:can-you-access",
 "java:data-structures:java-1d-array",
 "java:strings:java-string-tokens")
 
